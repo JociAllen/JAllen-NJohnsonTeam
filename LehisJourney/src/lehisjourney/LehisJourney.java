@@ -17,6 +17,8 @@ public class LehisJourney {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
+       
+    
         Player playerOne = new Player();
         
         playerOne.setName("Nephi");
@@ -24,7 +26,7 @@ public class LehisJourney {
         
         String playerInfo = playerOne.toString();
         System.out.println(playerInfo);
-        
+       
         
     }
     

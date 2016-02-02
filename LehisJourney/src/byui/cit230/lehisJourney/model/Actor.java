@@ -12,12 +12,12 @@ import java.util.Objects;
  *
  * @author AllenMac
  */
-public class Player implements Serializable {
+public class Actor implements Serializable{
     
     private String name;
-    private double bestTime;
+    private double role;
 
-    public Player() {
+    public Actor() {
     }
     
     
@@ -30,25 +30,25 @@ public class Player implements Serializable {
         this.name = name;
     }
 
-    public double getBestTime() {
-        return bestTime;
+    public double getRole() {
+        return role;
     }
 
-    public void setBestTime(double bestTime) {
-        this.bestTime = bestTime;
+    public void setRole(double role) {
+        this.role = role;
     }
 
     @Override
     public int hashCode() {
-        int hash = 5;
-        hash = 97 * hash + Objects.hashCode(this.name);
-        hash = 97 * hash + (int) (Double.doubleToLongBits(this.bestTime) ^ (Double.doubleToLongBits(this.bestTime) >>> 32));
+        int hash = 3;
+        hash = 67 * hash + Objects.hashCode(this.name);
+        hash = 67 * hash + (int) (Double.doubleToLongBits(this.role) ^ (Double.doubleToLongBits(this.role) >>> 32));
         return hash;
     }
 
     @Override
     public String toString() {
-        return "Player{" + "name=" + name + ", bestTime=" + bestTime + '}';
+        return "Actor{" + "name=" + name + ", role=" + role + '}';
     }
 
     @Override
@@ -62,11 +62,20 @@ public class Player implements Serializable {
         if (getClass() != obj.getClass()) {
             return false;
         }
-        final Player other = (Player) obj;
-        if (Double.doubleToLongBits(this.bestTime) != Double.doubleToLongBits(other.bestTime)) {
+        final Actor other = (Actor) obj;
+        if (Double.doubleToLongBits(this.role) != Double.doubleToLongBits(other.role)) {
             return false;
         }
-        return Objects.equals(this.name, other.name);
+        if (!Objects.equals(this.name, other.name)) {
+            return false;
+        }
+        return true;
     }
-      
+
+    public void setRole(String father) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+    
+    
+    
 }
