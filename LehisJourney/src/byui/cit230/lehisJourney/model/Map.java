@@ -14,13 +14,9 @@ public class Map {
     private static final int NUM_ROWS = 5;
     private static final int NUM_COLS = 5;
     
-    private final Location[][] matrix;
+    private Location[][] matrix;
     
-    public Map() {
-        matrix = new Location[NUM_ROWS][NUM_COLS];
+    public Map(){
+        
     }
-    
-    public Location getLocation(int row, int col) {
-        return matrix[row][col];
-    }
-}
+   }

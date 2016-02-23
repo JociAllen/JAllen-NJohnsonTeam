@@ -6,13 +6,15 @@
 package lehisjourney;
 
 import byui.cit230.lehisJourney.model.Player;
+import byui.cit230.lehisJourney.view.StartProgramView;
 
 /**
  *
  * @author AllenMac
  */
 public class LehisJourney {
-
+    
+    private static Player player;
     /**
      * @param args the command line arguments
      */
@@ -26,8 +28,17 @@ public class LehisJourney {
         
         String playerInfo = playerOne.toString();
         System.out.println(playerInfo);
-       
+    
+    StartProgramView startProgram = new StartProgramView();
+    startProgram.startProgram();
         
     }
+
+    public static void setPlayer(Player p) {
+       player = p; 
+    }
+    
+    
+    
     
 }
